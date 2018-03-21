@@ -3,7 +3,7 @@
 /*
  * Plugin Name: Event Organiser Extended Admin Interface
  * Description: Extends the administration interface of the "Event Organizer" plugin with the "Reserve Tickets" entry as well as the appropriate ticket status "Reserved". Furthermore, it expands events with the meta tag "class no." and "internal notes". It also offers the possibility to further process bookings.
- * Plugin URI: https://github.com/cyberian90/wp-event-organiser-extended-admin-interface
+ * Plugin URI: https://github.com/BartzikWebdesign/wp-event-organiser-extended-admin-interface
  * Author: Bartzik Webdesign // BARTZIK.NET
  * Author URI: http://www.barzik.net/
  * Version: 1.0.0
