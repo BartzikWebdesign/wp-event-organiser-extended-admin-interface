@@ -1,0 +1,319 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Event Organiser Extended Admin Interface\n"
+"POT-Creation-Date: 2018-03-21 19:15+0100\n"
+"PO-Revision-Date: 2018-03-21 19:20+0100\n"
+"Last-Translator: Bartzik Webdesign <support@bartzik-webdesign.de>\n"
+"Language-Team: Bartzik Webdesign, support@bartzik-webdesign.de\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: event-organiser-extended-admin-interface.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: inc/general-functions.php:6
+msgid "Reserved"
+msgstr "Reserviert"
+
+#: inc/general-functions.php:7
+#, php-format
+msgid "Reservations <span class=\"count\">(%s)</span>"
+msgid_plural "Reservations <span class=\"count\">(%s)</span>"
+msgstr[0] "Reservierungen <span class=\"count\">(%s)</span>"
+msgstr[1] "Reservierungen <span class=\"count\">(%s)</span>"
+
+#: inc/general-functions.php:21 inc/general-functions.php:46
+msgid "Class Number"
+msgstr "Kurs-Nummer"
+
+#: inc/general-functions.php:47
+msgid "Action"
+msgstr "Aktion"
+
+#: inc/general-functions.php:58 inc/general-functions.php:74
+msgid "Edit Booking Details"
+msgstr "Buchungsdetails bearbeiten"
+
+#: inc/general-functions.php:73 inc/page-reservations.php:8
+msgid "Reservate Tickets"
+msgstr "Tickets reservieren"
+
+#: inc/general-functions.php:94
+msgid "Class-No."
+msgstr "Kurs-Nr."
+
+#: inc/general-functions.php:95
+msgid "Please enter a class number (up to 10 characters)"
+msgstr "Bitte geben Sie eine Kurs-Nr. ein (max. 10 Zeichen)"
+
+#: inc/general-functions.php:104
+msgid "Internal notes"
+msgstr "Interne Notizen"
+
+#: inc/general-functions.php:105
+msgid "Here you can save internal notes."
+msgstr "Hier können Sie interne Notizen eingeben."
+
+#: inc/page-edit-booking.php:14
+msgid "Edit booking details"
+msgstr "Buchungsdetails bearbeiten"
+
+#: inc/page-edit-booking.php:22
+msgid "The transferred ID is not a valid booking ID!"
+msgstr "Die übergebene ID ist keine gültige Buchungs-ID!"
+
+#: inc/page-edit-booking.php:23 inc/page-edit-booking.php:532
+#: inc/page-edit-booking.php:544 inc/page-reservations.php:749
+#: inc/page-reservations.php:773 inc/page-reservations.php:784
+#: inc/page-reservations.php:794 inc/page-reservations.php:804
+msgid "Back"
+msgstr "Zurück"
+
+#: inc/page-edit-booking.php:34 inc/page-edit-booking.php:348
+#: inc/page-edit-booking.php:362 inc/page-edit-booking.php:530
+#, php-format
+msgid ""
+"The booking with booking reference <b>#%1$s</b> cannot be modified because "
+"the booking form <b>#%2$s</b> is not available (anymore)."
+msgstr ""
+"Die Buchung mit der Buchungsnummer <b>#%1$s</b> kann nicht geändert werden, "
+"weil das Buchungsformular <b>#%2$s</b> nicht (mehr) verfügbar ist."
+
+#: inc/page-edit-booking.php:88 inc/page-reservations.php:197
+msgid "First Name"
+msgstr "Vorname"
+
+#: inc/page-edit-booking.php:101 inc/page-reservations.php:210
+msgid "Last Name"
+msgstr "Nachname"
+
+#: inc/page-edit-booking.php:341 inc/page-reservations.php:453
+msgid "Save"
+msgstr "Speichern"
+
+#: inc/page-edit-booking.php:542
+#, php-format
+msgid ""
+"The booking with the booking reference <a href=\"edit.php?"
+"post_type=event&page=bookings&action=edit&booking_id=%1$s\"><b>#%1$s</b></a> "
+"has been successfully processed."
+msgstr ""
+"Die Buchung mit der Buchungsreferenz <a href=\"edit.php?"
+"post_type=event&page=bookings&action=edit&booking_id=%1$s\"><b>#%1$s</b></a> "
+"wurde erfolgreich bearbeitet."
+
+#: inc/page-reservations.php:46
+msgid ""
+"All seats are already occupied for this appointment. Reservations can no "
+"longer be made."
+msgstr ""
+"Für diesen Termin sind bereits alle Plätze belegt. Es können keine "
+"Reservierungen mehr vorgenommen werden."
+
+#: inc/page-reservations.php:55
+msgid "Reservation details"
+msgstr "Angaben zur Reservierung"
+
+#: inc/page-reservations.php:56
+msgid ""
+"Please select the date for which you would like to make a reservation and "
+"then the number of tickets to reserve. Under Comments you can optionally "
+"enter a note for the reservation. This can be edited later."
+msgstr ""
+"Bitte wählen Sie den Termin, für den Sie eine Reservierung vornehmen möchten "
+"und anschließend die Anzahl der zu reservierenden Tickets. Unter Bemerkungen "
+"können Sie optional eine Notiz zur Reservierung eintragen. Diese kann später "
+"editiert werden."
+
+#: inc/page-reservations.php:63
+msgid "Event"
+msgstr "Termin"
+
+#: inc/page-reservations.php:81
+msgid ""
+"Select the appointment from the list for which tickets are to be reserved."
+msgstr ""
+"Wählen Sie den Termin aus der Liste aus, für den Tickets reserviert werden "
+"sollen."
+
+#: inc/page-reservations.php:90
+msgid "Ticket Type"
+msgstr "Tickettyp"
+
+#: inc/page-reservations.php:102
+msgid "Price"
+msgstr "Preis"
+
+#: inc/page-reservations.php:110
+msgid "Select ticket type from the list to be reserved."
+msgstr "Wählen Sie Tickettyp aus der Liste aus, der reserviert werden soll."
+
+#: inc/page-reservations.php:115
+msgid "Reservations"
+msgstr "Reservierungen"
+
+#: inc/page-reservations.php:122
+#, php-format
+msgid "%s Ticket available"
+msgid_plural "%s Tickets available"
+msgstr[0] "%s Ticket verfügbar"
+msgstr[1] "%s Tickets verfügbar"
+
+#: inc/page-reservations.php:125
+msgid "Enter the number of tickets to be reserved here."
+msgstr "Geben Sie hier die Anzahl der zu reservierenden Tickets ein."
+
+#: inc/page-reservations.php:130
+msgid "Remarks"
+msgstr "Bemerkungen"
+
+#: inc/page-reservations.php:133
+msgid "Reservation by administrator"
+msgstr "Reservierung durch Administrator"
+
+#: inc/page-reservations.php:134
+msgid "Enter here a comment to be saved to the reservation."
+msgstr ""
+"Geben Sie hier eine Bemerkung ein, die zu der Reservierung gespeichert "
+"werden soll."
+
+#: inc/page-reservations.php:141
+msgid "Optional reservation information"
+msgstr "Optionale Angaben zur Reservierung"
+
+#: inc/page-reservations.php:142
+msgid "The following information is optional and can be edited later."
+msgstr "Die nachfolgenden Angaben sind optional und später editierbar."
+
+#: inc/page-reservations.php:460 inc/page-reservations.php:747
+#, php-format
+msgid ""
+"A reservation for the event with the eventID <b>#%1$s</b> cannot be made "
+"because the booking form <b>#%2$s</b> is not available (anymore)."
+msgstr ""
+"Eine Reservierung für das Event mit der EventID <b>#%1$s</b> kann nicht "
+"angelegt werden, weil das Buchungsformular <b>#%2$s</b> nicht (mehr) "
+"verfügbar ist."
+
+#: inc/page-reservations.php:760
+#, php-format
+msgid ""
+"The reservation was successfully completed using the booking reference <a "
+"href=\"edit.php?post_type=event&page=bookings&action=edit&booking_id=%1$s"
+"\"><b>#%1$s</b></a>."
+msgstr ""
+"Die Reservierung wurde erfolgreich unter der Buchungsreferenz <a href=\"edit."
+"php?post_type=event&page=bookings&action=edit&booking_id=%1$s\"><b>#%1$s</"
+"b></a> erfasst."
+
+#: inc/page-reservations.php:765
+msgid "Generated Tickets"
+msgstr "Erzeugte Tickets"
+
+#: inc/page-reservations.php:767
+msgid "Ticket No."
+msgstr "Ticket Nr."
+
+#: inc/page-reservations.php:780
+msgid "There are not enough seats available for this event"
+msgstr "Es sind nicht genügend freie Plätze für dieses Event verfügbar"
+
+#: inc/page-reservations.php:781
+msgid "Desired reservations"
+msgstr "Gewünschte Reservierungen"
+
+#: inc/page-reservations.php:782
+msgid "Available reservations"
+msgstr "Verfügbare Reservierungen"
+
+#: inc/page-reservations.php:783
+msgid "No reservation has been made."
+msgstr "Es wurde keine Reservierung vorgenommen."
+
+#: inc/page-reservations.php:793
+msgid "You have not indicated a valid number of reserved tickets!"
+msgstr "Sie haben keine gültige Anzahl zu reservierender Tickets angegeben!"
+
+#: inc/page-reservations.php:803
+msgid "Not all required data was transmitted!"
+msgstr "Es wurden nicht alle erforderlichen Daten übermittelt!"
+
+#. Plugin Name of the plugin/theme
+msgid "Event Organiser Extended Admin Interface"
+msgstr "Event Organiser Extended Admin Interface"
+
+#. Plugin URI of the plugin/theme
+msgid "https://wp-event-organiser.com/"
+msgstr "https://wp-event-organiser.com/"
+
+#. Description of the plugin/theme
+msgid ""
+"Extends the administration interface of the \"Event Organizer\" plugin with "
+"the \"Reserve Tickets\" entry as well as the appropriate ticket status "
+"\"Reserved\". Furthermore, it expands events with the meta tag \"class no.\" "
+"and \"internal notes\". It also offers the possibility to further process "
+"bookings."
+msgstr ""
+"Erweitert die Administrationsoberfläche des Plugins \"Event Organizer\" um "
+"den Eintrag \"Tickets reservieren\" sowie über den passenden Ticketstatus "
+"\"Reserviert\". Weiterhin erweitert es Events um die Metafelder \"Kurs-Nr.\" "
+"und \"Interne Notizen\". Zudem bietet es die Möglichkeit, Buchungen "
+"weitergehend zu bearbeiten."
+
+#. Author of the plugin/theme
+msgid "Bartzik Webdesign // BARTZIK.NET"
+msgstr "Bartzik Webdesign // BARTZIK.NET"
+
+#. Author URI of the plugin/theme
+msgid "http://www.barzik.net/"
+msgstr "http://www.barzik.net/"
+
+#~ msgid ""
+#~ "Change the data related to the booking number <b>#%1$s</b> were recorded. "
+#~ "Please note that no revisions are saved."
+#~ msgstr ""
+#~ "Ändern Sie die Daten, die zu der Buchungsnummer <b>#%1$s</b> erfasst "
+#~ "wurden. Bitte beachten Sie, dass keine Revisionen gespeichert werden."
+
+#~ msgid "Salutation"
+#~ msgstr "Anrede"
+
+#~ msgid "Mr."
+#~ msgstr "Herr"
+
+#~ msgid "Mrs."
+#~ msgstr "Frau"
+
+#~ msgid "Address"
+#~ msgstr "Adresse"
+
+#~ msgid "Email"
+#~ msgstr "E-Mail"
+
+#~ msgid "Telephone"
+#~ msgstr "Telefon"
+
+#~ msgid "Date of Birth"
+#~ msgstr "Geburtsdatum"
+
+#~ msgid ""
+#~ "Extends the administration interface of the plugin \"Event Organizer\" "
+#~ "with the menu item \"Reserve tickets\" as well as the associated ticket "
+#~ "status \"Reserved\""
+#~ msgstr ""
+#~ "Erweitert die Administrationsoberfläche des Plugins \"Event Organiser\" "
+#~ "um den Menüpunkt \"Tickets reservieren\" sowie den dazugehörigen "
+#~ "Ticketstatus \"Reserviert\""
+
+#~ msgid "available Tickets"
+#~ msgstr "Verfügbare Tickets"
