@@ -31,6 +31,8 @@ function reservations() {
 			echo '  var remainingT = $(e).find(":selected").data("remainingtickets");';
 			echo '  var eventID 			= $(e).find(":selected").data("eventid");';
 			echo '  var eventOccurrenceID	= $(e).find(":selected").data("eventoccurrenceid");';
+			echo '  $(e).attr("disabled", "disbaled");';
+			echo '  $("#wait_image").removeAttr("hidden");';
 			echo '  location.href = "?post_type=event&page=reservations&event_id=" + eventID + "&event_occurence_id=" + eventOccurrenceID';
 			echo ' }';
 			echo '</script>';
@@ -77,7 +79,7 @@ function reservations() {
 			endforeach;
 			
 			/* close select tag and print another part of the reservation form */
-			echo '     </select><br>';
+			echo '     </select> <img id="wait_image" src="' .  plugins_url( '/../img/wait.gif', __FILE__ ) . '" hidden="hidden"><br>';
 			echo '     <span class="description">' . __('Select the appointment from the list for which tickets are to be reserved.', 'event-organiser-extended-admin-interface') . '</span>';
 			echo '    </td>';
 			echo '   </tr>';
