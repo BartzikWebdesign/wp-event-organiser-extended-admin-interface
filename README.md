@@ -30,7 +30,25 @@ This plugin is not directly related to WP Event Organizer or the authors.
 * Marciel Bartzik, [Bartzik Webdesign](http://www.bartzik.net)
 
 
+## Template usage
+You can use some custom code eg in your template files to interact with the plugin.
+
+### Show number of reservated tickets for a event
+```php
+<?php
+
+$reservations = eo_get_bookings( array(
+	'status'	=> 'reserved',
+	'event_id'	=> {{eventID}},
+	'occurrence_id'	=> {{occurrenceID}}
+) );
+$num_reservations = count( $reservations );
+
+?>
+```
+
+
 ## Versions
 Version | Changes
 ------- | -------
-* 1.0.0 (stable) | master branch
+1.0.0 (stable) | master branch
