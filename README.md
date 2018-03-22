@@ -8,6 +8,7 @@ Prerequisite is the paid Pro version of WP Event Organizer Pro.
 
 This plugin is not directly related to WP Event Organizer or the authors.
 
-# Installation
-1. Download source as a zip archive
-2. Copy the unpacked zip archive to /wp-contents/plugins or upload the zip archive via plugins > install plugin in the admin interface
+## Installation
+* Download and install using the built in WordPress plugin installer.
+* Activate in the "Plugins" area of your admin by clicking the "Activate" link.
+* No further setup or configuration is necessary.
