@@ -15,5 +15,22 @@ This plugin is not directly related to WP Event Organizer or the authors.
 * No further setup or configuration is necessary.
 
 
+## Screenshots
+![Reserve tickets](/img/screenshots/wp-event-organiser-extended-admin-interface_1.png)
+![Reserve tickets](/img/screenshots/wp-event-organiser-extended-admin-interface_2.png)
+![Edit booking details](/img/screenshots/wp-event-organiser-extended-admin-interface_3.png)
+![Edit booking details](/img/screenshots/wp-event-organiser-extended-admin-interface_4.png)
+
+
 ## Further Features
 * Supports translation, by default: English, German
+
+
+## Authors
+* Marciel Bartzik, [Bartzik Webdesign](http://www.bartzik.net)
+
+
+## Versions
+Version | Changes
+------- | -------
+* 1.0.0 (stable) | master branch
