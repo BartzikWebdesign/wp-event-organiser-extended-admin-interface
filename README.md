@@ -22,8 +22,14 @@ This plugin is not directly related to WP Event Organizer or the authors.
 ![Edit booking details](/img/screenshots/wp-event-organiser-extended-admin-interface_4.png)
 
 
+## Features
+* Administrators are given the opportunity to reserve tickets for an event
+* Administrators are given the option of editing the details of a booking (for example, address data of the booker). For this the booking form deposited for the event will be used.
+* For a better overview, a mandatory field "Course No." added to every event. This can also be queried in the template.
+
+
 ## Further Features
-* Supports translation, by default: English, German
+* Supports translation, by default: English, German (.po / .mo-files)
 
 
 ## Authors
@@ -32,6 +38,7 @@ This plugin is not directly related to WP Event Organizer or the authors.
 
 ## Template usage
 You can use some custom code eg in your template files to interact with the plugin.
+Please replace `{{variable}}` with a variable or value.
 
 ### Show number of reservated tickets for a event
 ```php
@@ -42,7 +49,24 @@ $reservations = eo_get_bookings( array(
 	'event_id'	=> {{eventID}},
 	'occurrence_id'	=> {{occurrenceID}}
 ) );
-$num_reservations = count( $reservations );
+
+$num_reservations = 0;
+
+if( $reservations ){
+	foreach( $reservations as $reservation ){
+		$num_reservations += eo_get_booking_meta( $reservation->ID, 'ticket_quantity' );
+	}
+}
+
+?>
+```
+
+
+### Show "Course No." in your template
+```php
+<?php
+
+echo get_post_meta( {{eventID}}, 'eoeai-class-no', true );
 
 ?>
 ```
