@@ -1,4 +1,5 @@
 # event-organiser-extended-admin-interface
+![event-organiser-extended-admin-interface](/screenshot.jpg)
 
 This WordPress plugin is an extension for WP Event Organizer Pro (http://wp-event-organiser.com).
 
@@ -7,6 +8,12 @@ It extends the backend with the possibility to make reservations and edit bookin
 Prerequisite is the paid Pro version of WP Event Organizer Pro.
 
 This plugin is not directly related to WP Event Organizer or the authors.
+
+
+## Features
+* Administrators are given the opportunity to reserve tickets for an event
+* Administrators are given the option of editing the details of a booking (for example, address data of the booker). For this the booking form deposited for the event will be used.
+* For a better overview, a mandatory field "Course No." added to every event. This can also be queried in the template.
 
 
 ## Installation
@@ -20,12 +27,6 @@ This plugin is not directly related to WP Event Organizer or the authors.
 ![Reserve tickets](/img/screenshots/wp-event-organiser-extended-admin-interface_2.png)
 ![Edit booking details](/img/screenshots/wp-event-organiser-extended-admin-interface_3.png)
 ![Edit booking details](/img/screenshots/wp-event-organiser-extended-admin-interface_4.png)
-
-
-## Features
-* Administrators are given the opportunity to reserve tickets for an event
-* Administrators are given the option of editing the details of a booking (for example, address data of the booker). For this the booking form deposited for the event will be used.
-* For a better overview, a mandatory field "Course No." added to every event. This can also be queried in the template.
 
 
 ## Further Features
