@@ -32,7 +32,7 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	__FILE__,
 	'event-organiser-extended-admin-interface'
 );
-$myUpdateChecker->setBranch('stable-branch-name');
+$myUpdateChecker->setBranch('master');
 
 
 /* Include general functions and plugin parts */
