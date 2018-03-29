@@ -6,7 +6,7 @@
  * Plugin URI: https://github.com/BartzikWebdesign/wp-event-organiser-extended-admin-interface
  * Author: Bartzik Webdesign // BARTZIK.NET
  * Author URI: http://www.barzik.net/
- * Version: 1.0.0
+ * Version: 1.0.1
  * License: GNU General Public License, version 3 (GPLv3)
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain: event-organiser-extended-admin-interface
@@ -23,6 +23,16 @@ function my_plugin_load_plugin_textdomain() {
     load_plugin_textdomain( 'event-organiser-extended-admin-interface', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
 }
 add_action( 'plugins_loaded', 'my_plugin_load_plugin_textdomain' );
+
+
+/* Update-Checker */
+require plugin_dir_path( __FILE__ ) . 'inc/plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/BartzikWebdesign/wp-event-organiser-extended-admin-interface',
+	__FILE__,
+	'event-organiser-extended-admin-interface'
+);
+$myUpdateChecker->setBranch('stable-branch-name');
 
 
 /* Include general functions and plugin parts */
