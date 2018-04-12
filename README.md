@@ -76,6 +76,7 @@ echo get_post_meta( {{eventID}}, 'eoeai-class-no', true );
 ## Versions
 Version | Changes
 ------- | -------
-1.0.2b (stable) | added support for userroles
+1.0.3 (stable) | added support for userroles (hotfix)
+1.0.2 | added support for userroles
 1.0.1 | added support for updates
 1.0.0 | master branch
