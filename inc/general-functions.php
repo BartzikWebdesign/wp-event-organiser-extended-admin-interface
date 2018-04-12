@@ -70,8 +70,8 @@ add_filter( 'manage_event_page_bookings_sortable_columns', 'own_eventorganiser_b
 
 /* Create new admin pages "Reservate Tickets" and "Edit Booking Details */
 function register_own_menu_page() {
-	add_submenu_page('edit.php?post_type=event', __('Reservate Tickets', 'event-organiser-extended-admin-interface'), __('Reservate Tickets', 'event-organiser-extended-admin-interface'), 'eoeai_reservate_tickets', 'reservations', 'reservations');
-	add_submenu_page('edit.php?post_type=event', __('Edit Booking Details', 'event-organiser-extended-admin-interface'), __('Edit Booking Details', 'event-organiser-extended-admin-interface'), 'eoeai_edit_booking_details', 'editbooking', 'editbooking');
+	add_submenu_page('edit.php?post_type=event', __('Reservate Tickets', 'event-organiser-extended-admin-interface'), __('Reservate Tickets', 'event-organiser-extended-admin-interface'), 'manage_eo_booking', 'reservations', 'reservations');
+	add_submenu_page('edit.php?post_type=event', __('Edit Booking Details', 'event-organiser-extended-admin-interface'), __('Edit Booking Details', 'event-organiser-extended-admin-interface'), 'manage_eo_booking', 'editbooking', 'editbooking');
 }
 add_action('admin_menu', 'register_own_menu_page');
 
