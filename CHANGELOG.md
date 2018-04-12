@@ -3,6 +3,6 @@
 
 Version | Changes
 ------- | -------
-1.0.2 (stable) | added support for userroles
+1.0.2b (stable) | added support for userroles
 1.0.1 | added support for updates
 1.0.0 | master branch
