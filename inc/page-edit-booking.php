@@ -189,6 +189,25 @@ function editbooking() {
 								
 								break;
 								
+							case 'input':
+								/* set fieldname */
+								$_fieldname = '_eo_booking_meta_' . $_form_data_id;
+								
+								/* print label tag */
+								echo '   <tr>';
+								echo '    <th scope="row">';
+								echo '     <label for="' . $_fieldname . '">' . $_form_data_values["label"] . '</label>';
+								echo '    </th>';
+								echo '    <td>';
+								
+								/* generate email input */
+								echo '     <input class="regular-text" type="text" name="' . $_fieldname . '" id="' . $_fieldname . '" value="' . $meta[$_fieldname][0] . '" placeholder="Text" />';
+								
+								echo '    </td>';
+								echo '   </tr>';
+								
+								break;
+								
 							case 'phone':
 								/* set fieldname */
 								$_fieldname = '_eo_booking_meta_' . $_form_data_id;
@@ -464,6 +483,15 @@ function editbooking() {
 						/* Save meta data */
 						update_post_meta($_booking_id, $_fieldname, $_POST[$_fieldname]);
 						update_post_meta($_booking_id, '_eo_booking_anon_email', $_POST[$_fieldname]);
+						
+						break;
+						
+					case 'input':
+						/* set fieldname */
+						$_fieldname = '_eo_booking_meta_' . $_form_data_id;
+						
+						/* Save meta data */
+						update_post_meta($_booking_id, $_fieldname, $_POST[$_fieldname]);
 						
 						break;
 						

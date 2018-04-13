@@ -280,6 +280,25 @@ function reservations() {
 								
 								break;
 								
+							case 'input':
+								/* set fieldname */
+								$_fieldname = '_eo_booking_meta_' . $_form_data_id;
+								
+								/* print label tag */
+								echo '   <tr>';
+								echo '    <th scope="row">';
+								echo '     <label for="' . $_fieldname . '">' . $_form_data_values["label"] . '</label>';
+								echo '    </th>';
+								echo '    <td>';
+								
+								/* generate telephone input */
+								echo '     <input class="regular-text" type="text" name="' . $_fieldname . '" id="' . $_fieldname . '" placeholder="Text" />';
+								
+								echo '    </td>';
+								echo '   </tr>';
+								
+								break;
+								
 							case 'phone':
 								/* set fieldname */
 								$_fieldname = '_eo_booking_meta_' . $_form_data_id;
@@ -626,6 +645,19 @@ function reservations() {
 									/* Save meta data */
 									add_post_meta($booking_id, $_fieldname, $_POST[$_fieldname]);
 									add_post_meta($booking_id, '_eo_booking_anon_email', $_POST[$_fieldname]);
+									
+									break;
+									
+								case 'input':
+									/* set labelname and fieldname */
+									$_labelname = '_eo_booking_label_meta_' . $_form_data_id;
+									$_fieldname = '_eo_booking_meta_' . $_form_data_id;
+									
+									/* Add meta label */
+									add_post_meta($booking_id, $_labelname, $_form_data_values["label"], true);
+									
+									/* Save meta data */
+									add_post_meta($booking_id, $_fieldname, $_POST[$_fieldname]);
 									
 									break;
 									
