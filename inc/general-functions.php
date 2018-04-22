@@ -41,21 +41,21 @@ add_filter( 'manage_edit-event_sortable_columns', 'own_eventorganiser_event_sort
 
 /* 
  * Create new metadata and column "eoeai-show-event-bookings (Show event booking)" to event overview table
- * Create column "eoeai-class-no"  http://neu.verkehrswacht-siegerland.de/wp-admin/edit.php?post_type=event&page=bookings&event_id=262
+ * Create column "eoeai-class-no"
  */
-function own_eventorganiser_event_add_columns( $columns ) {
+function own_eventorganiser_event_add_columns_2( $columns ) {
 	$columns['eoeai-show-event-bookings'] = __('Event Bookings', 'event-organiser-extended-admin-interface');
 	return $columns;
 }
-add_filter( 'manage_edit-event_columns', 'own_eventorganiser_event_add_columns', 15, 2 );
+add_filter( 'manage_edit-event_columns', 'own_eventorganiser_event_add_columns_2', 15, 2 );
 
 /* Create value display for new column "eoeai-show-event-bookings" */
-function own_eventorganiser_event_fill_columns( $column_name, $id ) {
+function own_eventorganiser_event_fill_columns_2( $column_name, $id ) {
 	if($column_name == 'eoeai-show-event-bookings') {
 		echo '<a href="edit.php?post_type=event&page=bookings&event_id=' . $id . '">' .  __('Show Event Bookings', 'event-organiser-extended-admin-interface') . '</a>';
 	}
 }
-add_action( 'manage_event_posts_custom_column', 'own_eventorganiser_event_fill_columns', 15, 2 );
+add_action( 'manage_event_posts_custom_column', 'own_eventorganiser_event_fill_columns_2', 15, 2 );
 
 
 /* Add new column "eoeai-class-no" and "edit-booking-meta" column to booking overview table
