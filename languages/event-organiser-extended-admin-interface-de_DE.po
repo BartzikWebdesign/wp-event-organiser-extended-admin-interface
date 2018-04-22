@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Event Organiser Extended Admin Interface\n"
-"POT-Creation-Date: 2018-03-21 19:15+0100\n"
-"PO-Revision-Date: 2018-03-21 19:20+0100\n"
+"POT-Creation-Date: 2018-04-22 15:12+0200\n"
+"PO-Revision-Date: 2018-04-22 15:13+0200\n"
 "Last-Translator: Bartzik Webdesign <support@bartzik-webdesign.de>\n"
 "Language-Team: Bartzik Webdesign, support@bartzik-webdesign.de\n"
 "Language: de_DE\n"
@@ -32,55 +32,63 @@ msgid_plural "Reservations <span class=\"count\">(%s)</span>"
 msgstr[0] "Reservierungen <span class=\"count\">(%s)</span>"
 msgstr[1] "Reservierungen <span class=\"count\">(%s)</span>"
 
-#: inc/general-functions.php:21 inc/general-functions.php:46
+#: inc/general-functions.php:21 inc/general-functions.php:65
 msgid "Class Number"
 msgstr "Kurs-Nummer"
 
 #: inc/general-functions.php:47
+msgid "Event Bookings"
+msgstr "Terminbuchungen"
+
+#: inc/general-functions.php:55
+msgid "Show Event Bookings"
+msgstr "Zeige Terminbuchungen"
+
+#: inc/general-functions.php:66
 msgid "Action"
 msgstr "Aktion"
 
-#: inc/general-functions.php:58 inc/general-functions.php:74
+#: inc/general-functions.php:77 inc/general-functions.php:93
 msgid "Edit Booking Details"
 msgstr "Buchungsdetails bearbeiten"
 
-#: inc/general-functions.php:73 inc/page-reservations.php:8
+#: inc/general-functions.php:92 inc/page-reservations.php:8
 msgid "Reservate Tickets"
 msgstr "Tickets reservieren"
 
-#: inc/general-functions.php:94
+#: inc/general-functions.php:113
 msgid "Class-No."
 msgstr "Kurs-Nr."
 
-#: inc/general-functions.php:95
+#: inc/general-functions.php:114
 msgid "Please enter a class number (up to 10 characters)"
 msgstr "Bitte geben Sie eine Kurs-Nr. ein (max. 10 Zeichen)"
 
-#: inc/general-functions.php:104
+#: inc/general-functions.php:123
 msgid "Internal notes"
 msgstr "Interne Notizen"
 
-#: inc/general-functions.php:105
+#: inc/general-functions.php:124
 msgid "Here you can save internal notes."
 msgstr "Hier können Sie interne Notizen eingeben."
 
-#: inc/page-edit-booking.php:14
+#: inc/page-edit-booking.php:17
 msgid "Edit booking details"
 msgstr "Buchungsdetails bearbeiten"
 
-#: inc/page-edit-booking.php:22
+#: inc/page-edit-booking.php:30
 msgid "The transferred ID is not a valid booking ID!"
 msgstr "Die übergebene ID ist keine gültige Buchungs-ID!"
 
-#: inc/page-edit-booking.php:23 inc/page-edit-booking.php:532
-#: inc/page-edit-booking.php:544 inc/page-reservations.php:749
-#: inc/page-reservations.php:773 inc/page-reservations.php:784
-#: inc/page-reservations.php:794 inc/page-reservations.php:804
+#: inc/page-edit-booking.php:31 inc/page-edit-booking.php:594
+#: inc/page-edit-booking.php:607 inc/page-reservations.php:781
+#: inc/page-reservations.php:805 inc/page-reservations.php:816
+#: inc/page-reservations.php:826 inc/page-reservations.php:836
 msgid "Back"
 msgstr "Zurück"
 
-#: inc/page-edit-booking.php:34 inc/page-edit-booking.php:348
-#: inc/page-edit-booking.php:362 inc/page-edit-booking.php:530
+#: inc/page-edit-booking.php:50 inc/page-edit-booking.php:390
+#: inc/page-edit-booking.php:409 inc/page-edit-booking.php:592
 #, php-format
 msgid ""
 "The booking with booking reference <b>#%1$s</b> cannot be modified because "
@@ -89,19 +97,19 @@ msgstr ""
 "Die Buchung mit der Buchungsnummer <b>#%1$s</b> kann nicht geändert werden, "
 "weil das Buchungsformular <b>#%2$s</b> nicht (mehr) verfügbar ist."
 
-#: inc/page-edit-booking.php:88 inc/page-reservations.php:197
+#: inc/page-edit-booking.php:105 inc/page-reservations.php:196
 msgid "First Name"
 msgstr "Vorname"
 
-#: inc/page-edit-booking.php:101 inc/page-reservations.php:210
+#: inc/page-edit-booking.php:118 inc/page-reservations.php:209
 msgid "Last Name"
 msgstr "Nachname"
 
-#: inc/page-edit-booking.php:341 inc/page-reservations.php:453
+#: inc/page-edit-booking.php:383 inc/page-reservations.php:474
 msgid "Save"
 msgstr "Speichern"
 
-#: inc/page-edit-booking.php:542
+#: inc/page-edit-booking.php:605
 #, php-format
 msgid ""
 "The booking with the booking reference <a href=\"edit.php?"
@@ -112,7 +120,7 @@ msgstr ""
 "post_type=event&page=bookings&action=edit&booking_id=%1$s\"><b>#%1$s</b></a> "
 "wurde erfolgreich bearbeitet."
 
-#: inc/page-reservations.php:46
+#: inc/page-reservations.php:48
 msgid ""
 "All seats are already occupied for this appointment. Reservations can no "
 "longer be made."
@@ -120,11 +128,11 @@ msgstr ""
 "Für diesen Termin sind bereits alle Plätze belegt. Es können keine "
 "Reservierungen mehr vorgenommen werden."
 
-#: inc/page-reservations.php:55
+#: inc/page-reservations.php:57
 msgid "Reservation details"
 msgstr "Angaben zur Reservierung"
 
-#: inc/page-reservations.php:56
+#: inc/page-reservations.php:58
 msgid ""
 "Please select the date for which you would like to make a reservation and "
 "then the number of tickets to reserve. Under Comments you can optionally "
@@ -135,67 +143,67 @@ msgstr ""
 "können Sie optional eine Notiz zur Reservierung eintragen. Diese kann später "
 "editiert werden."
 
-#: inc/page-reservations.php:63
+#: inc/page-reservations.php:65
 msgid "Event"
 msgstr "Termin"
 
-#: inc/page-reservations.php:81
+#: inc/page-reservations.php:83
 msgid ""
 "Select the appointment from the list for which tickets are to be reserved."
 msgstr ""
 "Wählen Sie den Termin aus der Liste aus, für den Tickets reserviert werden "
 "sollen."
 
-#: inc/page-reservations.php:90
+#: inc/page-reservations.php:92
 msgid "Ticket Type"
 msgstr "Tickettyp"
 
-#: inc/page-reservations.php:102
+#: inc/page-reservations.php:104
 msgid "Price"
 msgstr "Preis"
 
-#: inc/page-reservations.php:110
+#: inc/page-reservations.php:112
 msgid "Select ticket type from the list to be reserved."
 msgstr "Wählen Sie Tickettyp aus der Liste aus, der reserviert werden soll."
 
-#: inc/page-reservations.php:115
+#: inc/page-reservations.php:117
 msgid "Reservations"
 msgstr "Reservierungen"
 
-#: inc/page-reservations.php:122
+#: inc/page-reservations.php:124
 #, php-format
 msgid "%s Ticket available"
 msgid_plural "%s Tickets available"
 msgstr[0] "%s Ticket verfügbar"
 msgstr[1] "%s Tickets verfügbar"
 
-#: inc/page-reservations.php:125
+#: inc/page-reservations.php:127
 msgid "Enter the number of tickets to be reserved here."
 msgstr "Geben Sie hier die Anzahl der zu reservierenden Tickets ein."
 
-#: inc/page-reservations.php:130
+#: inc/page-reservations.php:132
 msgid "Remarks"
 msgstr "Bemerkungen"
 
-#: inc/page-reservations.php:133
+#: inc/page-reservations.php:135
 msgid "Reservation by administrator"
 msgstr "Reservierung durch Administrator"
 
-#: inc/page-reservations.php:134
+#: inc/page-reservations.php:136
 msgid "Enter here a comment to be saved to the reservation."
 msgstr ""
 "Geben Sie hier eine Bemerkung ein, die zu der Reservierung gespeichert "
 "werden soll."
 
-#: inc/page-reservations.php:141
+#: inc/page-reservations.php:143
 msgid "Optional reservation information"
 msgstr "Optionale Angaben zur Reservierung"
 
-#: inc/page-reservations.php:142
+#: inc/page-reservations.php:144
 msgid "The following information is optional and can be edited later."
 msgstr "Die nachfolgenden Angaben sind optional und später editierbar."
 
-#: inc/page-reservations.php:460 inc/page-reservations.php:747
+#: inc/page-reservations.php:481 inc/page-reservations.php:779
 #, php-format
 msgid ""
 "A reservation for the event with the eventID <b>#%1$s</b> cannot be made "
@@ -205,7 +213,7 @@ msgstr ""
 "angelegt werden, weil das Buchungsformular <b>#%2$s</b> nicht (mehr) "
 "verfügbar ist."
 
-#: inc/page-reservations.php:760
+#: inc/page-reservations.php:792
 #, php-format
 msgid ""
 "The reservation was successfully completed using the booking reference <a "
@@ -216,45 +224,88 @@ msgstr ""
 "php?post_type=event&page=bookings&action=edit&booking_id=%1$s\"><b>#%1$s</"
 "b></a> erfasst."
 
-#: inc/page-reservations.php:765
+#: inc/page-reservations.php:797
 msgid "Generated Tickets"
 msgstr "Erzeugte Tickets"
 
-#: inc/page-reservations.php:767
+#: inc/page-reservations.php:799
 msgid "Ticket No."
 msgstr "Ticket Nr."
 
-#: inc/page-reservations.php:780
+#: inc/page-reservations.php:812
 msgid "There are not enough seats available for this event"
 msgstr "Es sind nicht genügend freie Plätze für dieses Event verfügbar"
 
-#: inc/page-reservations.php:781
+#: inc/page-reservations.php:813
 msgid "Desired reservations"
 msgstr "Gewünschte Reservierungen"
 
-#: inc/page-reservations.php:782
+#: inc/page-reservations.php:814
 msgid "Available reservations"
 msgstr "Verfügbare Reservierungen"
 
-#: inc/page-reservations.php:783
+#: inc/page-reservations.php:815
 msgid "No reservation has been made."
 msgstr "Es wurde keine Reservierung vorgenommen."
 
-#: inc/page-reservations.php:793
+#: inc/page-reservations.php:825
 msgid "You have not indicated a valid number of reserved tickets!"
 msgstr "Sie haben keine gültige Anzahl zu reservierender Tickets angegeben!"
 
-#: inc/page-reservations.php:803
+#: inc/page-reservations.php:835
 msgid "Not all required data was transmitted!"
 msgstr "Es wurden nicht alle erforderlichen Daten übermittelt!"
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:395
+msgid "Check for updates"
+msgstr "Suche nach Aktualisierungen"
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:432
+msgid "View details"
+msgstr "Zeige Details"
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:455
+#, php-format
+msgid "More information about %s"
+msgstr "Weitere Informationen über %s"
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:548
+#, php-format
+msgctxt "the plugin title"
+msgid "The %s plugin is up to date."
+msgstr "Das Plugin %s ist auf dem neusten Stand."
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:550
+#, php-format
+msgctxt "the plugin title"
+msgid "A new version of the %s plugin is available."
+msgstr "Eine neue Version des Plugins %s ist verfügbar"
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:552
+#, php-format
+msgctxt "the plugin title"
+msgid "Could not determine if updates are available for %s."
+msgstr "Konnte nicht prüfen, ob Updates für das Plugin %s verfügbar sind."
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:558
+#, php-format
+msgid "Unknown update checker status \"%s\""
+msgstr "Unbekannter Status für Aktualisierungscheck \"%s\""
+
+#: inc/plugin-update-checker/Puc/v4p4/Vcs/PluginUpdateChecker.php:98
+msgid "There is no changelog available."
+msgstr "Es ist kein Changelog verfügbar."
 
 #. Plugin Name of the plugin/theme
 msgid "Event Organiser Extended Admin Interface"
 msgstr "Event Organiser Extended Admin Interface"
 
 #. Plugin URI of the plugin/theme
-msgid "https://wp-event-organiser.com/"
-msgstr "https://wp-event-organiser.com/"
+msgid ""
+"https://github.com/BartzikWebdesign/wp-event-organiser-extended-admin-"
+"interface"
+msgstr ""
+"https://github.com/BartzikWebdesign/wp-event-organiser-extended-booking-form"
 
 #. Description of the plugin/theme
 msgid ""
@@ -277,6 +328,9 @@ msgstr "Bartzik Webdesign // BARTZIK.NET"
 #. Author URI of the plugin/theme
 msgid "http://www.barzik.net/"
 msgstr "http://www.barzik.net/"
+
+#~ msgid "https://wp-event-organiser.com/"
+#~ msgstr "https://wp-event-organiser.com/"
 
 #~ msgid ""
 #~ "Change the data related to the booking number <b>#%1$s</b> were recorded. "

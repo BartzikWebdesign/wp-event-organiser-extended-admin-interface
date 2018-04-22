@@ -76,7 +76,8 @@ echo get_post_meta( {{eventID}}, 'eoeai-class-no', true );
 ## Versions
 Version | Changes
 ------- | -------
-1.0.4 (stable) | added support for input fields (textfields)
+1.0.5 (stable) | added event bookings shortcut
+1.0.4 | added support for input fields (textfields)
 1.0.3 | added support for userroles (hotfix)
 1.0.2 | added support for userroles
 1.0.1 | added support for updates
