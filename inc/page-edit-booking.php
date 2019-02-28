@@ -51,6 +51,54 @@ function editbooking() {
 				echo ' </p>';
 				
 			} else {
+                
+                // $t_meta = get_post_meta( $_booking_id );
+                //echo"<pre>";
+                //print_r($meta);
+                //echo"</pre>";
+                
+                echo '<br><br>';
+                echo '<table width="100%">';
+                echo '<thead>';
+                echo '<th style="text-align: left;">Anzahl</th>';
+                echo '<th style="text-align: left;">Ticket</th>';
+                echo '<th style="text-align: left;">Ticket Referenz</th>';
+                echo '<th style="text-align: left;">Preis</th>';
+                echo '<th style="text-align: left;">Gesamt</th>';
+                echo '</thead>';
+                echo '<tbody>';
+                
+                foreach( eo_get_booking_tickets( $_booking_id ) as $t_obj ) {
+                    echo '<tr>';
+                    echo '<td>' . $t_obj->ticket_quantity . '</td>';
+                    echo '<td>' . $t_obj->ticket_name . '</td>';
+                    echo '<td>' . $t_obj->ticket_reference . '</td>';
+                    echo '<td>' . $t_obj->ticket_price . ' EUR</td>';
+                    echo '<td>' . $t_obj->ticket_quantity * $t_obj->ticket_price . ' EUR</td>';
+                    echo '</tr>';
+                    
+                    $total += $t_obj->ticket_quantity * $t_obj->ticket_price;
+                    
+                    if($t_obj->ticket_reference == "" &&  $t_obj->ticket_name == "Manueller Rabatt / Zuschlag") {
+                        $discount    = $t_obj->ticket_price;
+                        $discount_id = $t_obj->booking_ticket_id;
+                    }
+                }
+                
+                echo '</tbody>';
+                echo '<tfoot>';
+                echo '<tr>';
+                echo '<td colspan="5"><hr></td>';
+                echo '</tr>';
+                echo '<tr>';
+                echo '<td colspan="4"><strong>Summe:</strong></td>';
+                echo '<td><strong>' . $total . ' EUR</strong></td>';
+                echo '</tr>';
+                echo '</tfoot>';
+                echo '</table>';
+                echo '<br><br>';
+                
+                //update_post_meta( $_booking_id, "_eo_booking_booking_amount", 75 );
 				
 				/* Print form */
 				echo '<form action="edit.php?post_type=event&page=editbooking&booking_id=' . $_booking_id . '" method="post">';
@@ -58,6 +106,16 @@ function editbooking() {
 				echo ' <input type="hidden" name="action" value="save" />';
 				echo ' <table class="form-table">';
 				echo '  <tbody>';
+                
+                echo '   <tr>';
+                echo '    <th scope="row">';
+                echo '     <label for="discount">Manueller Rabatt / Zuschlag</label>';
+                echo '    </th>';
+                echo '    <td>';
+                echo '     <input class="regular-text" type="number" step="0.01" name="discount" id="discount" value="' . $discount . '" placeholder="0" /> EUR';
+                echo '     <input type="hidden" name="discount_id" id="discount_id" value="' . $discount_id . '" />';
+                echo '    </td>';
+                echo '   </tr>';
 				
 				/* Get meta data of the given form */
 				$_form_meta	= get_post_meta( $meta["_eo_booking_form"][0] );
@@ -412,6 +470,50 @@ function editbooking() {
 		}
 		
 	} else {
+        
+        /* if manuel discount is only updated */
+        if(is_numeric($_POST["discount_id"])) {
+            global $wpdb;
+            $table = $wpdb->prefix . 'eo_booking_tickets';
+            $resultUpdateDiscount = $wpdb->update( 
+                $table, 
+                array( 
+                    'ticket_price' => $_POST["discount"]
+                ), 
+                array( 'booking_ticket_id' => $_POST["discount_id"] ), 
+                array( 
+                    '%s'
+                ), 
+                array( '%d' ) 
+            );
+        } else if(is_numeric($_POST["discount"])) {
+            # echo "Buchungs-ID: " . $_booking_id . "<br>";
+            # echo "Discount: " . $_POST["discount"] . " EUR<br>";
+            # echo "Event-ID: " . get_post_meta($_booking_id, "_eo_booking_event_id", true) . "<br>";
+            # echo "Occurence-ID: " . get_post_meta($_booking_id, "_eo_booking_occurrence_id", true) . "<br>";
+            
+            global $wpdb;
+            $table = $wpdb->prefix . 'eo_booking_tickets';
+            $resultUpdateDiscount = $wpdb->insert( 
+                $table, 
+                array( 
+                    'booking_id' => $_booking_id,
+                    'ticket_name' => 'Manueller Rabatt / Zuschlag',
+                    'ticket_price' => $_POST["discount"],
+                    'event_id' => get_post_meta($_booking_id, "_eo_booking_event_id", true),
+                    'occurrence_id' => get_post_meta($_booking_id, "_eo_booking_occurrence_id", true)
+                ), 
+                array( 
+                    '%d',
+                    '%s',
+                    '%s',
+                    '%d',
+                    '%d'
+                )
+            );
+            
+            # echo "SQL: " . $resultUpdateDiscount;
+        }
 		
 		/* prepare form data */
 		$_form_meta	= get_post_meta( $meta["_eo_booking_form"][0] );
@@ -606,6 +708,7 @@ function editbooking() {
 		echo '</p>';
 		echo '<p><a href="edit.php?post_type=event&page=bookings">' . __('Back', 'event-organiser-extended-admin-interface') . '</a></p>';
 		echo '</div>';
+        
 		
 		/* Exit */
 		exit();
