@@ -18,7 +18,10 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 /* jquery */
-wp_enqueue_script( 'jquery');
+function add_jquery_at_head() {
+    wp_enqueue_script( 'jquery');
+}
+add_action('admin_head', 'add_jquery_at_head');
 
 /* Load plugin text domain */
 function my_plugin_load_plugin_textdomain() {
