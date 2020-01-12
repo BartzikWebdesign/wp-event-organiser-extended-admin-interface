@@ -17,7 +17,7 @@
 /* Exit if accessed directly */
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-/* jquery */
+/* inster jquery in head */
 function add_jquery_at_head() {
     wp_enqueue_script( 'jquery');
 }
