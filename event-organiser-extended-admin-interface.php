@@ -6,7 +6,7 @@
  * Plugin URI: https://github.com/BartzikWebdesign/wp-event-organiser-extended-admin-interface
  * Author: Bartzik Webdesign // BARTZIK.NET
  * Author URI: http://www.barzik.net/
- * Version: 1.0.6
+ * Version: 1.0.7
  * License: GNU General Public License, version 3 (GPLv3)
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain: event-organiser-extended-admin-interface
@@ -17,6 +17,8 @@
 /* Exit if accessed directly */
 if ( ! defined( 'ABSPATH' ) ) exit;
 
+/* jquery */
+wp_enqueue_script( 'jquery');
 
 /* Load plugin text domain */
 function my_plugin_load_plugin_textdomain() {
