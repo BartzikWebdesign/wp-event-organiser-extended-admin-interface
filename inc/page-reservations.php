@@ -2,7 +2,7 @@
 
 /* Generate admin page "Reservate Tickets" and all functions */
 function reservations() {
-	
+    
 	/* Print the headline */
 	echo '<div class="wrap">';
 	echo '  <h2 class="wp-heading-inline">' . __('Reservate Tickets', 'event-organiser-extended-admin-interface') . '</h2>';
@@ -24,18 +24,6 @@ function reservations() {
 			
 			/* set dateformat */
 			$format = "d.m.Y";
-			
-			/* Generate js function to switch page on event selection */
-			echo '<script type="text/javascript">';
-			echo ' jQuery(function($){function selectedEventChange(e) {';
-			echo '  var remainingT = $(e).find(":selected").data("remainingtickets");';
-			echo '  var eventID 			= $(e).find(":selected").data("eventid");';
-			echo '  var eventOccurrenceID	= $(e).find(":selected").data("eventoccurrenceid");';
-			echo '  $(e).attr("disabled", "disbaled");';
-			echo '  $("#wait_image").removeAttr("hidden");';
-			echo '  location.href = "?post_type=event&page=reservations&event_id=" + eventID + "&event_occurence_id=" + eventOccurrenceID';
-			echo ' }});';
-			echo '</script>';
 			
 			/* If there is a valid eventID and optional a valid OccurrenceID */
 			if(isset($_GET["event_id"]) && intval($_GET["event_id"]) != "" && get_post_type(intval($_GET["event_id"])) == "event" && isset($_GET["event_occurence_id"])) {

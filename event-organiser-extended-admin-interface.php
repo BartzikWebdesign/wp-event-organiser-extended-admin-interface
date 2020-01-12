@@ -6,7 +6,7 @@
  * Plugin URI: https://github.com/BartzikWebdesign/wp-event-organiser-extended-admin-interface
  * Author: Bartzik Webdesign // BARTZIK.NET
  * Author URI: http://www.barzik.net/
- * Version: 1.0.9
+ * Version: 1.0.10
  * License: GNU General Public License, version 3 (GPLv3)
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain: event-organiser-extended-admin-interface
@@ -16,12 +16,6 @@
 
 /* Exit if accessed directly */
 if ( ! defined( 'ABSPATH' ) ) exit;
-
-/* inster jquery in head */
-function add_jquery_at_head() {
-    wp_enqueue_script( 'jquery');
-}
-add_action('admin_head', 'add_jquery_at_head');
 
 /* Load plugin text domain */
 function my_plugin_load_plugin_textdomain() {
@@ -38,6 +32,14 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'event-organiser-extended-admin-interface'
 );
 $myUpdateChecker->setBranch('master');
+
+
+/* include js */
+function event_organiser_extended_admin_interface() {
+    wp_register_script( 'event_organiser_extended_admin_interface', plugins_url('/js/functions.js', __FILE__), array('jquery'), '', true);
+    wp_enqueue_script( 'event_organiser_extended_admin_interface' );
+}
+add_action( 'admin_menu', 'event_organiser_extended_admin_interface' );
 
 
 /* Include general functions and plugin parts */
