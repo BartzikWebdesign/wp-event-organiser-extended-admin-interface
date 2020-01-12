@@ -3,7 +3,7 @@
 
 Version | Changes
 ------- | -------
-1.0.7/8 (stable) | fixed missing jquery lib
+1.0.9 (stable) | fixed missing jquery lib
 1.0.6 | added support for special discounts / rates on admin
 1.0.5 | added event bookings shortcut
 1.0.4 | added support for input fields (textfields)

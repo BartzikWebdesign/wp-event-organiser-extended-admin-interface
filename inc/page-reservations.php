@@ -27,14 +27,14 @@ function reservations() {
 			
 			/* Generate js function to switch page on event selection */
 			echo '<script type="text/javascript">';
-			echo ' function selectedEventChange(e) {';
+			echo ' jQuery(function($){function selectedEventChange(e) {';
 			echo '  var remainingT = $(e).find(":selected").data("remainingtickets");';
 			echo '  var eventID 			= $(e).find(":selected").data("eventid");';
 			echo '  var eventOccurrenceID	= $(e).find(":selected").data("eventoccurrenceid");';
 			echo '  $(e).attr("disabled", "disbaled");';
 			echo '  $("#wait_image").removeAttr("hidden");';
 			echo '  location.href = "?post_type=event&page=reservations&event_id=" + eventID + "&event_occurence_id=" + eventOccurrenceID';
-			echo ' }';
+			echo ' }});';
 			echo '</script>';
 			
 			/* If there is a valid eventID and optional a valid OccurrenceID */
